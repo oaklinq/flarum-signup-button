@@ -12,7 +12,6 @@
   "authors": [
     {
       "name": "Kvothe",
-      "email": "info@kvothe.de",
       "role": "Developer"
     }
   ],
@@ -25,13 +24,16 @@
     "flarum-extension": {
       "title": "Sign Up Button",
       "icon": {
-        "name": "",
-        "backgroundColor": "",
-        "color": ""
+        "image": "resources/logo.png",
+        "backgroundColor": "#27ae60",
+        "backgroundSize": "100%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundPosition": "center"
+       
       }
     },
     "flagrow": {
-      "discuss": ""
+      "discuss": "https://discuss.flarum.org/d/18812-sign-up-button"
     }
   }
 }
