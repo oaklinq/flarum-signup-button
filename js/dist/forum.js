@@ -127,14 +127,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_IndexPage__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'sidebarItems', function (items) {
+    var replaceBool = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('kvothe-sub.replace-discussion-button');
+    var classes = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('kvothe-sub.hide-desktop') ? 'Button Button--primary KvotheSub KvotheSub--hidden' : 'Button Button--primary KvotheSub';
+    var priority = replaceBool ? 110 : -90;
+
     if (typeof flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.session.user === 'undefined') {
       items.add('SUEButton', flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a.component({
         children: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('kvothe-sub.forum.signup'),
-        className: 'Button Button--primary KvotheSub',
+        className: classes,
         onclick: function onclick() {
           flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.modal.show(new flarum_components_SignUpModal__WEBPACK_IMPORTED_MODULE_4___default.a());
         }
-      }), -100);
+      }), priority);
+
+      if (replaceBool) {
+        items.remove('newDiscussion');
+      }
     }
   });
 });
@@ -155,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addButtonUnderNavItems__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addButtonUnderNavItems */ "./src/forum/addButtonUnderNavItems.js");
 
 
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('kvothe/signup-button', function () {
+flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('kvothe-signup-button', function () {
   Object(_addButtonUnderNavItems__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 
