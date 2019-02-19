@@ -129,7 +129,7 @@ __webpack_require__.r(__webpack_exports__);
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_IndexPage__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'sidebarItems', function (items) {
     var replaceBool = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('kvothe-sub.replace-discussion-button');
     var classes = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('kvothe-sub.hide-desktop') ? 'Button Button--primary KvotheSub KvotheSub--hidden' : 'Button Button--primary KvotheSub';
-    var priority = replaceBool ? 110 : -90;
+    var priority = replaceBool ? 110 : -110;
 
     if (typeof flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.session.user === 'undefined') {
       items.add('SUEButton', flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a.component({

@@ -8,7 +8,7 @@ export default function() {
     extend(IndexPage.prototype, 'sidebarItems', function(items) {
     	const replaceBool= app.forum.attribute('kvothe-sub.replace-discussion-button');
     	const classes = app.forum.attribute('kvothe-sub.hide-desktop') ? 'Button Button--primary KvotheSub KvotheSub--hidden' : 'Button Button--primary KvotheSub';
-    	const priority = replaceBool ? 110 : -90;
+    	const priority = replaceBool ? 110 : -110;
 
         if (typeof app.session.user === 'undefined') {
             items.add('SUEButton', Button.component({
