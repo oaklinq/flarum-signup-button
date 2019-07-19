@@ -1,0 +1,9 @@
+kvothe-sub:
+  forum:
+    signup: Registrieren
+  admin:
+    settings:
+      title: Einstellungen für den Registrieren-Button
+      field:
+        hide-desktop: Zeige den Button nicht in der Desktop Ansicht.
+        replace-discussion-button: Ersetze den "Diskussion starten"-Button.
